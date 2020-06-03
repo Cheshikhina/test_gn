@@ -1,0 +1,111 @@
+.form {
+  form {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 281px;
+
+    &>span {
+      position: absolute;
+      top: -40px;
+      color: rgba($white, 0.5);
+    }
+  }
+
+  input {
+    @include input;
+    width: 100%;
+    margin-bottom: 30px;
+    background-color: transparent;
+    background: 0 0;
+    border: none;
+    border-bottom: 1px solid $accent_2;
+    border-radius: 0;
+    outline: 0;
+    resize: none;
+    transition: $transition;
+
+    @each $placeholder in $placeholders_dots {
+      &::#{$placeholder} {
+        @include input;
+        transition: $transition;
+      }
+    }
+
+    @each $placeholder in $placeholders_dot {
+      &:#{$placeholder} {
+        @include input;
+        transition: $transition;
+      }
+    }
+
+    &:hover {
+      border-bottom: 1px solid $white;
+      cursor: pointer;
+    }
+
+    &:focus {
+      border-bottom: 1px solid $white;
+
+
+      @each $placeholder in $placeholders_dots {
+        &::#{$placeholder} {
+          opacity: 0;
+        }
+      }
+
+      @each $placeholder in $placeholders_dot {
+        &:#{$placeholder} {
+          opacity: 0;
+        }
+      }
+    }
+  }
+
+  button[type="submit"] {
+    @include font($fs_16, $lh_30);
+    max-width: 218px;
+    margin-top: 15px;
+    padding: 10px rem(20);
+    background-color: transparent;
+    color: $white;
+    border-radius: 29.5px;
+    border: 1px solid $white;
+    transition: $transition;
+
+    &:active {
+      opacity: $opacity;
+      outline: none;
+
+    }
+  }
+}
+
+@media (max-width: $tablet_max) {
+  .form {
+    justify-content: center;
+    align-items: center;
+
+    form,
+    button[type="submit"] {
+      max-width: 600px;
+      align-self: center;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    form>span {
+      top: -25px;
+    }
+  }
+}
+
+@media (min-width: $no_mobile) {
+
+  .form button[type="submit"]:hover,
+  .form button[type="submit"]:focus {
+    background-color: $background_hover;
+    outline: none;
+  }
+}

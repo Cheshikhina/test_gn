@@ -1,0 +1,22 @@
+@charset "utf-8";
+@import "normalize";
+
+// abstracts
+@import "./abstracts/variables";
+@import "./abstracts/mixin";
+@import "./abstracts/visually_hidden";
+@import "./abstracts/animations";
+
+// general
+@import "./general/fonts";
+@import "./general/scaffolding";
+
+// components
+@import "./components/wrapper";
+@import "./components/image";
+
+// blocks
+@import "./blocks/main";
+@import "./blocks/gift";
+@import "./blocks/article";
+@import "./blocks/form";

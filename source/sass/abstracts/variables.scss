@@ -1,0 +1,46 @@
+// sizes
+$mobile_min: 320px;
+$mobile_max: 768px;
+$tablet_max: 1024px;
+$desktop_max: 1920px;
+$no_mobile: 769px;
+
+// color scheme
+$white: #ffffff;
+$black: #000000;
+$text_header: #6d7278;
+$accent_1: #5a88c1;
+$accent_2:#5c738b;
+$background:#142536;
+$background_hover:#22374b;
+$line: #405265;
+$body: #f4f4f6;
+
+// fonts size
+$main_font: 16px;
+
+$fs_14: 14;
+$fs_16: 16;
+$fs_22: 22;
+$fs_30: 30;
+
+$lh_19: 19;
+$lh_20: 20;
+$lh_24: 24;
+$lh_28: 28;
+$lh_30: 30;
+$lh_38: 38;
+
+// another
+$transition: all 0.3s;
+// $duration_03: 0.3s;
+// $duration_07: 0.7s;
+$opacity: 0.87;
+$ls_15: 1.5px;
+$br_08: 8px;
+$shadow: 0 4px 26px 0 #e1e1e1;
+$placeholders_dots: "-moz-placeholder",
+"-webkit-input-placeholder",
+"placeholder";
+$placeholders_dot: "-moz-placeholder",
+"-ms-input-placeholder";

@@ -1,0 +1,115 @@
+@function rem($size) {
+  @return $size*1px / $main_font*1rem;
+}
+
+@function decimal_round($number, $digits: 0, $mode: round) {
+  $n: 1;
+
+  @if type-of($number) !=number {
+    @warn '#{ $number } is not a number.';
+    @return $number;
+  }
+
+  @if type-of($digits) !=number {
+    @warn '#{ $digits } is not a number.';
+    @return $number;
+  }
+
+  @else if not unitless($digits) {
+    @warn '#{ $digits } has a unit.';
+    @return $number;
+  }
+
+  @if $digits>0 {
+    @for $i from 1 through $digits {
+      $n: $n * 10;
+    }
+  }
+
+  @if $mode==round {
+    @return round($number * $n)/$n;
+  }
+
+  @else if $mode==ceil {
+    @return ceil($number * $n)/$n;
+  }
+
+  @else if $mode==floor {
+    @return floor($number * $n)/$n;
+  }
+
+  @else {
+    @warn '#{ $mode } is undefined keyword.';
+    @return $number;
+  }
+}
+
+@mixin font($size, $line_height) {
+  font-size: rem($size);
+  line-height: decimal_round($line_height/$size*100%);
+}
+
+@mixin visually_hidden {
+  position: absolute;
+  width: 1px;
+  min-width: initial;
+  height: 1px;
+  min-height: initial;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  border: 0;
+  clip: rect(0 0 0 0);
+  clip-path: inset(100%);
+}
+
+@mixin button {
+  background-color: transparent;
+  outline: none;
+  border: none;
+  border-radius: 0;
+  padding: 0;
+  cursor: pointer;
+}
+
+@mixin button_font {
+  @include font($fs_22, $lh_28);
+  color: $white;
+}
+
+@mixin page_title {
+  @include font($fs_30, $lh_38);
+  text-align: center;
+}
+
+@mixin main_font {
+  @include font($fs_16, $lh_24);
+}
+
+@mixin link {
+  @include font($fs_16, $lh_18);
+}
+
+@mixin container ($max_width, $padding: 0) {
+  width: 100%;
+  max-width: $max_width*1px + $padding*2px;
+  margin: 0 auto;
+  padding: 0 $padding*1px;
+}
+
+@mixin before {
+  position: absolute;
+  content: "";
+  display: flex;
+}
+
+@mixin input {
+  @include main_font;
+  color: $white;
+
+  @media screen and (-ms-high-contrast: active),
+  (-ms-high-contrast: none) {
+    color: $white !important;
+  }
+}

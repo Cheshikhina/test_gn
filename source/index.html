@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="Description" content="Genotek">
+  <title>Genotek</title>
+  <link rel="stylesheet" href="./css/style.min.css">
+
+</head>
+
+<body>
+  <main>
+    <div class="wrapper">
+      <article class="article">
+        <section class="main">
+          <div class="main__header">
+            <a href="#" class="main__logo">GENOTEK</a>
+            <span class="main__time">неделю назад</span>
+            <p class="main__whose"><span>доступно только мне</span></p>
+          </div>
+          <div class="main__info">
+            <h1 class="main__title">Подарочный набор для сдачи ДНК-теста доставлен</h1>
+            <p class="main__desc">Спасибо, что выбрали Genotek! На&nbsp;упаковке вы&nbsp;найдете подробную инструкцию как сдать ДНК-тест.</p>
+            <div class="main__img image">
+              <picture>
+                <source type="image/webp" srcset="./img/main__desktop@1x.webp 1x, ./img/main__desktop@2x.webp 2x">
+
+                <img src="./img/main__desktop@1x.jpg" srcset="./img/main__desktop@2x.jpg 2x" alt="Подарок в золотой упаковке с красной ленточкой" width="1300" height="450" loading="lazy">
+              </picture>
+            </div>
+          </div>
+        </section>
+        <section class="gift">
+          <div class="gift__inner">
+            <h2 class="visually_hidden">ДНК-тест в подарок другу</h2>
+            <button type="button" class="gift__btn">Как подарить набор другу, чтобы он&nbsp;создал свой личный кабинет?</button>
+            <div class="gift__content">
+              <div class="gift__text">
+                <p>Все просто! На&nbsp;подарочной упаковке ДНК-теста указан временный логин и&nbsp;пароль, который защищен стираемой полосой.</p>
+                <p>Человеку, который получил ДНК-тест в&nbsp;подарок, нужно ввести временный логин и&nbsp;пароль на&nbsp;странице входа в&nbsp;личный кабинет&nbsp;<a href="#">lk.genotek.ru.</a> После этого ему будет предложено зарегистрироваться или указать данные уже зарегистрированного пользователя, ввести номер пробирки и&nbsp;вызвать курьера для доставки биоматериала в&nbsp;лабораторию.</p>
+                <p>Обратите внимание, что по&nbsp;умолчанию вы&nbsp;не&nbsp;получите доступ к&nbsp;результатам ДНК-теста того, кому вы&nbsp;подарили тест. Но&nbsp;вы&nbsp;можете попросить вашего близкого поделиться с&nbsp;вами результатами в&nbsp;его настройках профиля.</p>
+              </div>
+              <div class="gift__img">
+                <picture>
+                  <source type="image/webp" srcset="./img/certificate__desktop@1x.webp 1x, ./img/certificate__desktop@2x.webp 2x">
+
+                  <img src="./img/certificate__desktop@1x.jpg" srcset="./img/certificate__desktop@2x.jpg 2x" alt="Ваш сертификат" width="250" height="250" loading="lazy">
+                </picture>
+              </div>
+            </div>
+          </div>
+          <div class="gift__inner">
+            <h2 class="visually_hidden">Активация ДНК-теста</h2>
+            <button type="button" class="gift__btn">Хочу активировать ДНК-тест в&nbsp;этом личном кабинете</button>
+            <div class="gift__content">
+              <div class="gift__text gift__text--form">
+                <p>На&nbsp;подарочной упаковке ДНК-теста указан временный логин и&nbsp;пароль, который защищен стираемой полосой. Пожалуйста, введите их&nbsp;ниже. После ввода временных данных, вы&nbsp;сможете ввести номер пробирки и&nbsp;вызвать курьера для доставки биоматериала в&nbsp;лабораторию.</p>
+              </div>
+              <div class="gift__img">
+                <div class="gift__img image">
+                  <picture>
+                    <source type="image/webp" srcset="./img/certificate__desktop@1x.webp 1x, ./img/certificate__desktop@2x.webp 2x">
+
+                    <img src="./img/certificate__desktop@1x.jpg" srcset="./img/certificate__desktop@2x.jpg 2x" alt="Ваш сертификат" width="250" height="250" loading="lazy">
+                  </picture>
+                </div>
+              </div>
+              <div class="gift__form form">
+                <form method="POST">
+                  <label for="your_login" class="visually_hidden">Введите ваш логин</label>
+                  <input type="text" name="login" id="your_login" placeholder="Логин">
+                  <label for="your_password" class="visually_hidden"></label>
+                  <input type="password" name="password" id="your_password" placeholder="Пароль">
+                  <button type="submit">Активировать ДНК-тест</button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </section>
+      </article>
+    </div>
+  </main>
+  <script src="./js/main.js"></script>
+</body>
+
+</html>

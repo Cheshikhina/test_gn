@@ -1,0 +1,13 @@
+.article {
+  @include container(1300);
+  border-radius: $br_08;
+  box-shadow: $shadow;
+  background-color: $white;
+  overflow: hidden;
+}
+
+@media (max-width: $tablet_max) {
+  .article {
+    border-radius: 0;
+  }
+}
