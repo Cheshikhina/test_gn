@@ -1,10 +1,9 @@
-const accordion = (wrapperSelector, btnSelector, contentSelector, activeClassContant, activeClassBtn) => {
+const accordion = (wrapperSelector, btnSelector, contentSelector, activeClassBtn) => {
   const wrapper = document.querySelector(wrapperSelector),
-    btns = document.querySelectorAll(btnSelector),
-    content = document.querySelectorAll(contentSelector);
+    btns = document.querySelectorAll(btnSelector);
+    // content = document.querySelectorAll(contentSelector);
 
   function toggleAccordionContent(l) {
-    content[l].classList.toggle(activeClassContant);
     btns[l].classList.toggle(activeClassBtn);
   }
 

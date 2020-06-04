@@ -5,6 +5,6 @@ import noFocus from './modules/common';
 
 window.addEventListener('DOMContentLoaded', () => {
   noFocus();
-  accordion('.gift', '.gift__btn', '.gift__content', 'gift__content--active', 'gift__btn--active');
+  accordion('.gift', '.gift__btn', '.gift__content', 'gift__btn--active');
   form();
 });
